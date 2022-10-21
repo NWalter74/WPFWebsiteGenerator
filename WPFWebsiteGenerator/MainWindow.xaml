@@ -1,0 +1,49 @@
+﻿<Window x:Class="WPFWebsiteGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFWebsiteGenerator"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="900" ResizeMode="NoResize">
+    <Grid>
+        <TabControl>
+            <TabItem Header="GUI för programmerare">
+                <Grid Background="AliceBlue">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="220"></ColumnDefinition>
+                        <ColumnDefinition Width="680"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="Btn_LoadHtmlSite"  Content="Ladda HTML sida..." Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,90,0,0" Grid.ColumnSpan="2" Click="Btn_LoadHtmlSite_Click"/>
+                    <Button x:Name="Btn_SaveHtmlSite" Content="Spara HTML sida..." Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,150,0,0" Grid.ColumnSpan="2" Click="Btn_SaveHtmlSite_Click" />
+                    <TextBox x:Name="TBox_LoadetHtmlSite" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="vänta..." VerticalAlignment="Top" Width="550" Height="380"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="GUI för manager">
+                <Grid Background="AliceBlue">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="220"></ColumnDefinition>
+                        <ColumnDefinition Width="680"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Vilken klass?" HorizontalAlignment="Left" Margin="50,60,0,0" VerticalAlignment="Top" Width="150"/>
+                    <Label Content="Vilka techniquer?" HorizontalAlignment="Left" Margin="50,120,0,0" VerticalAlignment="Top" Width="150"/>
+                    <Label Content="Vilket meddelande?" HorizontalAlignment="Left" Margin="50,180,0,0" VerticalAlignment="Top" Width="150"/>
+                    <Label Content="Vilken färg?" HorizontalAlignment="Left" Margin="50,240,0,0" VerticalAlignment="Top" Width="150"/>
+                    <TextBox x:Name="TBox_klassInput" Grid.Column="1" HorizontalAlignment="Left" Margin="36,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" BorderBrush="#FF000F32" Height="50"/>
+                    <Label x:Name="Lbl_Infotext" Content="*Kommasepparera vid flera olika inlägg i rutorna!" Margin="36,10,0, 0" Foreground="Red" Grid.Column="2"></Label>
+                    <TextBox x:Name="TBox_techniquesInput" Grid.Column="1" HorizontalAlignment="Left" Margin="36,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" BorderBrush="#FF000F32" Height="50"/>
+                    <TextBox x:Name="TBox_meddelandeInput" Grid.Column="1" HorizontalAlignment="Left" Margin="36,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" BorderBrush="#FF000F32" Height="50"/>
+                    <RadioButton Grid.Column="1" Content="mörkblå" HorizontalAlignment="Left" Margin="36,255,0,0" VerticalAlignment="Top" Checked="Action"/>
+                    <RadioButton Grid.Column="1" Content="röd" HorizontalAlignment="Left" Margin="126,255,0,0" VerticalAlignment="Top" Checked="Action"/>
+                    <RadioButton Grid.Column="1" Content="grön" HorizontalAlignment="Left" Margin="196,255,0,0" VerticalAlignment="Top" Checked="Action"/>
+                    <Button x:Name="Btn_SaveInställningar" Content="Spara HTML inställningar..." Width="160" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,360,0,0" Grid.Column="1" Click="Btn_SaveInställningar_Click" />
+                    <Label Grid.Column="1" Name="myLabel" Content="" HorizontalAlignment="Left" Margin="36,29,0,0" VerticalAlignment="Top" Height="29" Width="159" Visibility="Hidden"></Label>
+                    <Label x:Name="Lbl_Info" Content="*" Foreground="Red" FontSize="18" HorizontalAlignment="Left" Margin="115,50,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="Lbl_Info_Copy" Content="*" Foreground="Red" FontSize="18" HorizontalAlignment="Left" Margin="155,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.657,4.127"/>
+                    <Label x:Name="Lbl_Info_Copy1" Content="*" Foreground="Red" FontSize="18" HorizontalAlignment="Left" Margin="140,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.999,2.176"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
